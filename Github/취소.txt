@@ -1,0 +1,41 @@
+[CANCEL]
+reset option: --hard, --soft, --mixed(default)
+
+----------------------------------------
+옵션: --hard
+----------------------------------------
+수정되기 전 상태(원본 유지)
+커밋(commit) 취소, add 취소, 수정 취소
+git reset --hard HEAD^
+
+----------------------------------------
+옵션: --soft
+----------------------------------------
+커밋(commit) 취소
+git reset --soft HEAD^
+
+add 취소
+git restore --staged filename
+
+수정 취소
+git restore filename
+
+----------------------------------------
+옵션: --mixed(default)
+----------------------------------------
+커밋(commit) 취소, add 취소
+git reset HEAD^
+git reset --mixed HEAD^
+
+add 취소
+git reset HEAD
+git reset --mixed HEAD
+
+수정 취소
+git restore filename
+
+-------------------------------------------
+병합취소(Branch Cancel)
+-------------------------------------------
+git reset --merge ORIG_HEAD
+git reset --hard ORIG_HEAD

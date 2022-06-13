@@ -1,0 +1,65 @@
+
+1. 저장소 만들기
+	git init
+	
+2. 파일 생성 및 준비
+
+
+3. 준비영역에 반영(add)
+	git add filename
+	git add filename1 filename2
+	git add *.java
+	git folder/*
+	
+	모든 파일(새로운 파일, 수정된 파일)을 준비영역에 반영
+	git add --all
+	
+	모든 수정된 파일을 준비영역에 반영
+	git add --update
+	
+4. 준비영역에 있는 파일을 로컬 저장소에 반영(commit)
+	git commit -m "커밋 메시지"
+	git commit -m '커밋 메시지'
+	
+	등록된 기본 에디터을 활성화 시켜서 커밋 메시지를 입력
+	git commit
+	
+	마지막 커밋을 취소하고 새로운 커밋으로 변경
+	git commit --amend -m "커밋 메시지"
+	
+	마지막 커밋을 취소하고 새로운 커밋으로 변경
+	커밋 메시지는 기본 에디터를 통해서 입력
+	git commit --amend
+	
+	한 번이라도 커밋이 되거나 준비영역에 있는 파일을
+	준비영역에 등록하고 커밋을 한 번에 하는 옵션(-a)
+	git commit -a -m "커밋 메시지"
+
+5. 히스토리(log, show)
+	커밋된 모든 히스토리를 시간의 역순으로 보기
+	git log
+	
+	커밋된 모든 히스토리를 시간의 역순으로 지정된 숫자 만큼만 보기
+	git log -3
+	
+	커밋된 모든 히스토리를 시간의 역순으로 간략하게 보기(한 줄로 보기)
+	git log --oneline
+	
+	커밋의 비교(diff) 결과 보기
+	git log -p
+	git log -p -2
+	
+	커밋 해시코드에 해당하는 로그 메시지와 수정사항을 확인
+	git show f680628
+	
+	등록된 태크에 해당하는 로그 메시지와 수정사항을 확인
+	git show 태그이름
+	
+6. 태크(tag)
+	모든 태그 목록 보기
+	git tag
+	
+	등록된 태크에 해당하는 로그 메시지와 수정사항을 확인(상세정보 보기)
+	git show 태크이름
+	
+	

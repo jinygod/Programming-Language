@@ -1,0 +1,13 @@
+[브랜치 삭제 복구]
+
+$ git reflog
+a5dc103 (HEAD -> b1) HEAD@{0}: checkout: moving from master to b1
+a5dc103 (HEAD -> b1) HEAD@{1}: commit (initial): [master] 최초생성
+
+USER@C900 MINGW64 /e/Temp/Hello (b1)
+$ git checkout -b master HEAD@{0}
+Switched to a new branch 'master'
+
+USER@C900 MINGW64 /e/Temp/Hello (master)
+$ git log --oneline
+a5dc103 (HEAD -> master, b1) [master] 최초생성

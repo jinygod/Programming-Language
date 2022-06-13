@@ -1,0 +1,35 @@
+--------------------------------------------------------------------------------------------
+[SOLDB]
+--------------------------------------------------------------------------------------------
+CREATE SMALLFILE TABLESPACE SOLDB 
+    DATAFILE 
+        'C:\Oracle\11g\app\oracle\oradata\XE\SOLDB.DBF' SIZE 10485760 AUTOEXTEND ON NEXT 5242880 MAXSIZE 104857600 
+    BLOCKSIZE 8192 
+    DEFAULT NOCOMPRESS 
+    ONLINE 
+    SEGMENT SPACE MANAGEMENT AUTO 
+    EXTENT MANAGEMENT LOCAL AUTOALLOCATE;
+
+
+DROP TABLESPACE "SOLDB"
+
+DROP TABLESPACE "SOLDB"
+    INCLUDING CONTENTS AND DATAFILES
+     CASCADE CONSTRAINTS
+--------------------------------------------------------------------------------------------
+[SOLUSER]
+--------------------------------------------------------------------------------------------
+-- USER SQL
+ALTER USER "SOLUSER" IDENTIFIED BY "SOLUSER" 
+DEFAULT TABLESPACE "SOLDB"
+TEMPORARY TABLESPACE "TEMP"
+ACCOUNT UNLOCK ;
+
+-- QUOTAS
+ALTER USER "SOLUSER" QUOTA UNLIMITED ON "SOLDB";
+
+-- ROLES
+ALTER USER "SOLUSER" DEFAULT ROLE "CONNECT","RESOURCE";
+
+-- SYSTEM PRIVILEGES
+

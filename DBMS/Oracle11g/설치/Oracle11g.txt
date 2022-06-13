@@ -1,0 +1,24 @@
+데이터베이스(Database)
+
+
+사이트: oracle.com
+다운로드: Oracle 11g
+
+Oracle Database Express Edition (XE) Release 11.2.0.2.0 (11gR2).
+Oracle Database 11gR2 Express Edition for Windows x64
+
+https://www.oracle.com/database/technologies/xe-prior-release-downloads.html#license-lightbox
+
+(sqldeveloper)
+SQL Developer 21.4.3 Downloads
+https://www.oracle.com/tools/downloads/sqldev-downloads.html
+
+-----------------------------------------------------------------------
+SYS & SYSTEM : SOLSYS
+
+Destination Folder: C:\Oracle\11g\
+Oracle Home: C:\Oracle\11g\app\oracle\product\11.2.0\server\
+Oracle Base:C:\Oracle\11g\
+Port for 'Oracle Database Listener': 1521
+Port for 'Oracle Services for Microsoft Transaction Server': 2030
+Port for 'Oracle HTTP Listener': 8080

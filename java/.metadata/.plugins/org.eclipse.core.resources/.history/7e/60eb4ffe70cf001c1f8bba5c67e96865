@@ -1,0 +1,25 @@
+package threedprinter6generic;
+
+/*
+ * T에 올수 있는 클래스는 Material을 상속한 자식 클래스로 한정
+ * 또는 Material로부터 파생된 클래스만 가능하다.
+ */
+public class Material3DPrinter<T extends Material> {
+	private T material;
+
+	public void setMaterial(T material) {
+		this.material = material;
+	}
+	
+	public T getMaterial() {
+		return this.material;
+	}
+/*
+	public void printing() {
+		if(this.material instanceof Material) {
+			Material mx = (Material)this.material;
+					mx.doPrinter();
+		}
+	}
+	*/
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>String 객체</title>
+    <script>
+        function strval(str){
+            document.write('<h3>', str, ', length=', str.length, '</h3>');
+            for(var i=0; i < str.length; i++){
+               document.write('[', i, ']', str[i], '<br>');
+        }
+            document.write('<br>')
+        }
+        var s1 = '문자열 1';
+        var s2 = new String('문자열 2');
+        var s3 = new String(s1);
+        var s4 = new String(s2);
+
+        strval(s1);
+        strval(s2);
+        strval(s3);
+        strval(s4);
+    </script>
+</head>
+<body>
+</body>
+</html>

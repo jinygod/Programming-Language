@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>String 객체 - split</title>
+    <script>
+        /*
+        * 문자열 분할
+        * result = String.split(분할문자열)
+        * 분할문자열 : 해당 문자열에서 분할할 문자열
+        * 결과 : 분할된 문자열 목록을 배열로 리턴
+        */
+        function split(source, delimiter){
+            document.write('<h3>', source, '.split(', delimiter,  ')', '</h3>');
+
+            var result = source.split(delimiter);
+              document.write('원본=', source, '<br>');
+                document.write('결과=', result, '<br>');
+
+                for (var val in result) {
+                    document.write('[', val, ']', result[val], '<br>');
+                }
+        }
+        
+        var s1 = '010-1234-5678';
+        
+        //전화번호를 문자('-')를 기준으로 짜름
+       split(s1, '-');
+
+       var s2 = '031.765.7685'
+       split(s2, '.');
+    </script>
+</head>
+<body>
+</body>
+</html>

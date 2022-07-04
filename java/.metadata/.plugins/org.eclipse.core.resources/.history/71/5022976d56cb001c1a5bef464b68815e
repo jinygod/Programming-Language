@@ -1,0 +1,48 @@
+package calc;
+
+public class Calc2Impl extends Calc2{
+	int tot;
+	int cnt;
+	
+	@Override
+	public int add(int n1, int n2) {
+		int x = super.add(n1, n2);
+		tot += x;
+		cnt++;
+		return x;
+	}
+
+	@Override
+	public int sub(int n1, int n2) {
+		int x = super.sub(n1, n2);
+		tot -= x;
+		cnt++;
+		return x;
+	}
+
+	@Override
+	public int mul(int n1, int n2) {
+		int x = super.mul(n1, n2);
+		tot *= x;
+		cnt++;
+		return x;
+	}
+
+	@Override
+	public int div(int n1, int n2) {
+		int x = super.div(n1, n2);
+		tot /= x;
+		cnt++;
+		return x;
+	}
+	@Override
+	public int tot() {
+		return this.tot;
+	}
+	
+	public float avg() {
+		return (flaot)this.tot / (flaot)this.cnt;
+		
+	}
+
+}

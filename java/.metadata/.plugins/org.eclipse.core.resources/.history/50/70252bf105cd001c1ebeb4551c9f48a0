@@ -1,0 +1,26 @@
+/*
+ * StringBuilder: 스트링 처리
+ * 1. String : 단일 문자열 처리, 저장된 문자열을 수정할 수 없다.
+ * 2. StringBuilder : 다중 문자열 처리, 단일 스레드 환경에서 사용
+ * 3. StringBuffer : 다중 문자열 처리, 멀티 스레드 환경에서 사용
+ */
+package strings;
+
+public class StringBuilderRun1 {
+
+	public static void main(String[] args) {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Java ");
+		sb.append("Programming");
+		sb.append(".");
+		System.out.println("length: " + sb.length());
+		System.out.println(sb);
+
+		String str = "Java ";
+		str += "Programming";
+		str += ".";
+		System.out.println("length: " + sb.length());
+		System.out.println(sb);
+	}
+
+}

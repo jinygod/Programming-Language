@@ -1,0 +1,14 @@
+package students;
+
+public class StudentRun2 {
+
+	public static void main(String[] args) {
+		System.out.println("[Student]");
+		
+		Student2 student = new Student2("1234","오자바");
+		System.out.println(student);
+		System.out.println(student.toString());
+		
+	}
+
+}

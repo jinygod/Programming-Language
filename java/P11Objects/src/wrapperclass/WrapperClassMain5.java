@@ -1,0 +1,25 @@
+package wrapperclass;
+
+public class WrapperClassMain5 {
+
+	public static void main(String[] args) {
+		
+		// 숫자로 구성된 문자열을 기본형으로 변환
+		byte b = Byte.parseByte("15");
+		short s = Short.parseShort("12345");
+		int n = Integer.parseInt("1234567890");
+		long l = Long.parseLong("123456789013");
+		float f = Float.parseFloat("3.14");
+		double d = Double.parseDouble("3.1415927");
+		boolean t = Boolean.parseBoolean("true");
+		System.out.println("b = " + ++b);
+		System.out.println("s = " + s);
+		System.out.println("n = " + n);
+		System.out.println("l = " + l);
+		System.out.println("f = " + f);
+		System.out.println("d = " + d);
+		System.out.println("t = " + t);
+
+	}
+
+}

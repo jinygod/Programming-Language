@@ -1,0 +1,25 @@
+package finder;
+
+public abstract class SearchFinder implements Findable {
+
+	@Override
+	public int find(String word) {
+		System.out.printf("[SearchFinder] find(%s)", word);
+		return 0;
+	}
+
+	@Override
+	public int search(String statement) {
+		System.out.printf("[SearchFinder] search(%s)", statement);
+		return 0;
+	}
+
+	/*
+	@Override
+	public int lookup(String topic) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+*/
+	public abstract int lookup(String topic);
+}

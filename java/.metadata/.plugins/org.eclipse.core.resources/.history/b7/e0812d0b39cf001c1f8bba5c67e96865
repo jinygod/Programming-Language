@@ -1,0 +1,19 @@
+package wrapperclass;
+
+public class WrapperClassMain4 {
+
+	public static void main(String[] args) {
+		
+		// 숫자로 구성된 문자열을 정수형으로 변환
+		byte b = Byte.parseByte("15");
+		short s = Short.parseShort("12345");
+		int n = Integer.parseInt("1234567890");
+		long l = Long.parseLong("123456789013");
+		System.out.println("b = " + ++b);
+		System.out.println("s = " + s);
+		System.out.println("n = " + n);
+		System.out.println("l = " + l);
+
+	}
+
+}

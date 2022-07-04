@@ -1,0 +1,24 @@
+package threedprinter6generic;
+
+public class ThreeDPrinterMain {
+
+	public static void main(String[] args) {
+		System.out.println("[threedprinter6]");
+		
+		Material3DPrinter<Powder> powderPrinter = new Material3DPrinter<Powder>();
+		powderPrinter.setMaterial(new Powder());
+		powderPrinter.printing();
+		printing(powderPrinter.getMaterial());
+		
+		Material3DPrinter<Plastic> plasticPrinter = new Material3DPrinter<Plastic>();
+		plasticPrinter.setMaterial(new Plastic());
+		plasticPrinter.printing();
+		printing(plasticPrinter.getMaterial());
+		
+	}
+	
+	public static void printing(Material material) {
+		material.doPrinter();
+	}
+
+}

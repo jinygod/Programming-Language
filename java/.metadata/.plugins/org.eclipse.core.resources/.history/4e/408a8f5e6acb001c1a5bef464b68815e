@@ -1,0 +1,14 @@
+/*
+ * 기사의 내용을 담고있는 클래스
+ */
+package finder;
+
+public class Contents {
+	String content;
+	
+	public Contents() {}
+	
+	public Contents(String content);{
+		this.content = content;
+	}
+}

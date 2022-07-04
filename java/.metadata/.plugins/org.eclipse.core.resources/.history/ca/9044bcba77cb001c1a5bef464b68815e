@@ -1,0 +1,11 @@
+package finder;
+
+public class FinderRun {
+
+	public static void main(String[] args) {
+		SearchFindable sf = new LookupFinder();
+		SearchFindable.action(sf);
+	}
+		
+
+}

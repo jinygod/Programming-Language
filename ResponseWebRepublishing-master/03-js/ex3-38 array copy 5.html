@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Callback function</title>
+
+</head>
+<body>
+    <h1>Callback function</h1>
+    <hr>
+    <script>
+        /*
+        * title(string) : 작업명
+        * data(array) : 처리해야 할 작업목록
+        * callfunc(function) : 작업을 어떻게 하라.(작업지시서)
+        */
+
+        function Userfilter(title, data, callfunc) {
+            document.write("<h3>", title, "</h3>");
+            document.write('[Userfilter] ', 'callfunc= ', typeof callfunc, ' data=', data, '<br>');
+
+            for(var index in data) {
+                if(callfunc != undefined){  //작업지시서가 있으면 작업지시서에 맞춰서 처리
+                var result = callfunc(index, data[index]); //파라미터로 전달 된 함수를 실행(호출)
+                if(result == true){ //callfunc() 처리 결과가 참이면 데이터를 출력해라
+                    
+                }
+            else { //작업지시서가 없으면 무조건 출력
+                document.write('[callfunc] ', 'index = ', index , ' data= ' , data[index], '<br>');
+            }}
+            }
+        }
+
+        var lists = [1, 2, 3, 4,5,6,7,8,9,10];
+
+        document.write('원본[', lists, ']', '<br>');
+
+       Userfilter("홀수", lists, function(index, val){
+           return (val % 2) == 1;
+        });
+        function evenfunc(index, val) {
+            return (val % 2) == 0 ; 
+        }
+        Userfilter("짝수", lists, evenfunc);
+
+        Userfilter("3의배수", lists, function(index, val) {
+            return (val % 3) == 0;
+        });
+      
+    </script>
+</body>
+</html>

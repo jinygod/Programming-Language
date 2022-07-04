@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Math 객체를 이용한 로또</title>
+</head>
+<body>
+    <h1>로또 만들기</h1>
+    <ul>
+        <h3>로또규칙</h3>
+        <li>총 맞춰야 할 숫자의 갯수 6개</li>
+        <li>각 숫자는 1부터 45까지</li>
+        <li>
+            <h4>등수</h4>
+        <ul>
+            <li>1등: 6개 일치</li>
+            <li>2등: 5개 일치</li>
+            <li>3등: 4개 일치</li>
+            <li>4등: 3개 일치</li>
+            <li>5등: 2개 일치</li>
+            <li>6등: 1개 일치</li>
+        </ul>
+        </li>
+    </ul>
+    <hr>
+    <script>
+        var lotto = [];
+        for (var i=0; i<6; i++) {
+           var  num = Math.floor(Math.random() *44 ) +1 ;
+          for(var j in lotto){
+              while(num == lotto[j]){
+              num = Math.floor(Math.random() * 44 ) + 1 ;
+              }
+            }
+              lotto.push(num);
+        }
+             lotto.sort(function(a,b){
+                  return a-b;
+              });
+          
+        document.write("오늘의 행운의 당첨번호는 " + lotto, "입니다.");
+    
+</script>
+</body>
+</html>

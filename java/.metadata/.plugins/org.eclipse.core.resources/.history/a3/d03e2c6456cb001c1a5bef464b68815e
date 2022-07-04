@@ -1,0 +1,36 @@
+package calc;
+
+public class ClacRun2 {
+
+	public static void main(String[] args) {
+		// Cannot instantiate the type Calcable
+		// Calcable calc = new Calcable();
+		
+		System.out.println("[Calc2]");
+		
+		//Calc calc = new Calcable();
+		//Type mismatch: cannot convert from Calcable to Calc
+		//Cannot instantiate the type Calcable
+
+		Calcable calcable = new Calc2Impl();
+		Calcable calc;
+		int tot = calc.add(1, 2);
+		tot -= calc.sub(10, 5);
+		tot *= calc.mul(4, 2);
+		tot /= calc.div(6, 2);
+		
+		System.out.println("tot= " + tot);
+		System.out.println("calc.tot= " + calc.tot());
+		
+		System.out.println("calc.avg= " + calc.avg());
+	}
+	
+	public static void printTot(Calcable calc) {
+		System.out.println("calc.tot= " + calc.tot());
+	}
+	public static void printAvg(Calcable calc) {
+		float avg = (calc instanceof Calc2) ? ((Calc2)calc).avg() : 0.0f;
+		System.out.println("calc.avg= " + avg);
+	}
+
+}

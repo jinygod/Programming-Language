@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>매개변수</title>
+    <script>
+        /*
+        * arguments length : 전달된 파라미터의 갯수
+        * arguments[0] : 타이틀(string)
+        * arguments[1] : 숫자(number)
+        * arguments[2] : 숫자(number)
+        * */
+        function totavg() {
+            document.write('<h3>제목', arguments[0], "</h3>")
+            var tot = 0;
+            for (var x=1; x < arguments.length; x++){
+                document.write('인자', arguments[x], '<br>');
+                tot += arguments[x];
+        }
+        
+        document.write('합계', tot, '<br>');
+        document.write('평균', tot / (arguments.length -1), '<br>');
+    }
+    </script>
+</head>
+<body>
+    <h1>가변인자: sum(1,3,5,7,9, ...)</h1>
+    <p>함수의 파라미터의 갯수가 가변인 경우</p>
+    <script>
+        totavg('홀수의 합', 1,3,5,7,9);
+        totavg('짝수의 합', 2,4,6,8,10);
+        totavg('1부터 10까지의 합', 1,2,3,4,5,6,7,8,9,10);
+    </script>
+</body>
+</html>

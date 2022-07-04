@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>배열 sort()</title>
+    <h1>배열 - Array</h1>
+    <ul>
+        <li>배열의 특징</li>
+        <li>빈 배열에 인덱스를 통해서 값을 지정하면 크기는 가장 큰 번호에
+            해당하는 크기를 갖는다.</li>
+        <li>다양한 자료형을 요소로 가질 수 있다.</li>
+        <li>비어있는 요소는 undefined이다.</li>
+        
+    </ul>
+    </p>
+    <hr>
+    <script>
+        //var info = []; // 빈배열
+        //var info = ['시작',,'two'];  // 1:undefined
+
+        //Array()로 객체를 생성하면 중간에 빈 값은
+        //undefined나 null을 지정해야 한다.
+        var info = new Array('시작',null,'two',null,null);
+        // var info = new Array();
+ 
+        info[1] = '1';
+        info[3] = 'three';
+        info[5] = 5;
+        info[9] = '아홉';
+        info[10] = '';
+
+        document.write('배열 [', info, ']', '<br>');
+        document.write('크기 [', info.length, ']', '<br>');
+
+        for(var val in info) {
+            document.write('[', val, ']', info[val], '<br>');
+        }
+        document.write('<br>');
+        for(var idx=0; idx < info.length; idx++){
+            document.write('[', idx, ']', info[idx], '<br>');
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

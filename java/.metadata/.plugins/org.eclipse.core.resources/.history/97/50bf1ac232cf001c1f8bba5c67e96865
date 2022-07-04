@@ -1,0 +1,27 @@
+package wrapperclass;
+
+public class WrapperClassMain2 {
+
+	public static void main(String[] args) {
+
+		Byte objByte = 15;
+		Character objChar = 'ㅁ';
+		Short objShort = 32767;
+		Integer objInteger = 123456;
+		Long objLong = 1234567890L;
+		Float objFloat = 3.14159f;
+		Double objDouble = 3.1415927;
+		Boolean objBool = true;
+		
+		System.out.println(objByte);
+		System.out.println(objChar);
+		System.out.println(objShort);
+		System.out.println(objInteger);
+		System.out.println(objLong);
+		System.out.println(objFloat);
+		System.out.println(objDouble);
+		System.out.println(objBool);
+
+	}
+
+}

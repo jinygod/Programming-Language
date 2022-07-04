@@ -1,0 +1,38 @@
+/*
+ * StringBuilder: 스트링 처리
+ * 1. String : 단일 문자열 처리, 저장된 문자열을 수정할 수 없다.
+ * 2. StringBuilder : 다중 문자열 처리, 단일 스레드 환경에서 사용
+ * 3. StringBuffer : 다중 문자열 처리, 멀티 스레드 환경에서 사용
+ */
+package strings;
+
+public class StringBuilderRun4answer {
+
+	public static void main(String[] args) {
+	//	StringBuilder filepath = new StringBuilder("/home/ezen/workspace/ac.txt");
+		StringBuilder filepath = new StringBuilder("d/a/a/bc.txt");
+		System.out.println("[모든 폴더와 파일이름 각각 추출]");
+		
+		int filelen = filepath.length();
+		int fromIndex = filepath.indexOf("/") + 1;
+		
+		while(filelen > 0 && fromIndex >= 0 && fromIndex < filelen){
+			int filepos = filepath.indexOf("/", fromIndex);
+			
+			System.out.printf("fromIndex(%d), filepos(%d)\n", fromIndex, filepos);
+			
+			if(filepos < 0) {	// 맨 마지막 토큰 처리
+				if(fromIndex < filelen) {
+					String filename = filepath.substring(fromIndex);
+					System.out.println("filename= " + filename);
+				}
+				break;
+			}
+			
+			String filename = filepath.substring(fromIndex, filepos);
+			System.out.println("filename= " + filename);
+			fromIndex = filepos + 1 ;
+		}
+
+ }
+}

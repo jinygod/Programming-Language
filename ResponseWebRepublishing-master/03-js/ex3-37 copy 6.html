@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>String 객체 - replace</title>
+    <script>
+        /*
+        * 결과 = String.replace(대상문자열, 새로운문자열)
+        * 해당 문자열에서 찾아서 대상문자열을 찾아 새로운 문자열로 변경한 결과를 리턴
+        * 원본 문자열은 변경되지 않음
+        */
+        function replace(source, s, t ){
+            document.write('<h3>', source, '.replace:(', s, ',', t, ')', '</h3>');
+
+            var result = source.replace(s, t);
+               document.write('결과=', result, '<br>');
+               document.write('원본=', source, '<br>');
+        }
+        
+        var s1 = 'http://www.korea.com';
+        replace(s1, 'http', 'ftp');
+
+    </script>
+</head>
+<body>
+</body>
+</html>

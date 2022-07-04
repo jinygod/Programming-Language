@@ -1,0 +1,29 @@
+package finder;
+
+public abstract class SearchFinder implements SearchFindable {
+
+	@Override
+	public int find(String word) {
+		System.out.printf("[SearchFinder] find(%s)%n", word);
+		System.out.printf("\t line=%d%n"
+				, SearchFindable.contents().lookup(word));
+		return 0;
+	}
+
+	@Override
+	public int search(String statement) {
+		System.out.printf("[SearchFinder] search(%s)%n", statement);
+		System.out.printf("\t line=%d%n"
+				, SearchFindable.contents().lookup(statement));
+		return 0;
+	}
+
+	/*
+	@Override
+	public int lookup(String topic) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+*/
+	public abstract int lookup(String topic);
+}

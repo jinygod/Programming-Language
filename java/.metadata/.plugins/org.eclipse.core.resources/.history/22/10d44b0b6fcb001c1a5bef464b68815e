@@ -1,0 +1,21 @@
+package finder;
+
+public interface Findable {
+	static final Contents contents = new Contents();
+	//인터페이스에서 멤버속성은 무조건 public static final 특성을 갖는다.
+	//Contents contents = new Contents();
+	//정적 멤버 속성
+	
+	int find(String word);			// 단어검색
+	int search(String statement);	// 문장검색
+	int lookup(String topic);		// 제목검색
+	//추상 메소드
+	
+	public static void action(Findable findable) {
+		System.out.println("Findable.action");
+		findable.find("단어");
+		findable.search("문장");
+		findable.lookup("제목");
+		//정적 메소드
+	}
+}

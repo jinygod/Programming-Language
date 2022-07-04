@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Callback function</title>
+
+</head>
+<body>
+    <h1>Callback function</h1>
+    <hr>
+    <script>
+        /*
+        * title(string) : 작업명
+        * data(array) : 처리해야 할 작업목록(전화번호 목록)
+        * callfunc(function) : 작업을 어떻게 하라.(작업지시서)
+        */
+
+        function TeleMarketer(title, data, callfunc) {
+            document.write("<h3>", title, "</h3>");
+            document.write('[Userfilter] ', 'callfunc= ', typeof callfunc, ' data=', data, '<br>');
+
+            for(var nametel of data) {
+                var nametels = nametel.split(',');
+                var name = nametels[0];
+                var tel = nametels[1];
+                document.write('[마케터] name=', name , 'tel= ' , tel , '<br>');
+                if(callfunc !== undefined){  
+                var result = callfunc(tel);
+                 
+                   if(result == true) { 
+                    document.write('[마케터] 전화걸기: name=', name , 'tel= ' , tel , 
+                    '승인유무=', result, '<br>');
+                }
+             }
+            }
+        }
+
+        var tellist = [
+             "A,010-1234-4567",
+             "B,031-987-3456",
+             "C,010-8087-0308",
+             "D,041-4444-4444",
+             "E,053-5555-7942"
+            ];
+
+        document.write('전화번호목록[', tellist, ']', '<br>');
+
+        /*
+        * [작업지시서]
+        * 이름, 전화번호
+        * 이름은 추출해서 출력하고 전화번호는 추출해서 전화를 매니져에게 확인을 받고 승인이 되면 전화를 걸어라
+        */
+        //작업지시: 마케팅, 전달된 전화번호 목록가운데 누구에게 전화를 걸지는 내가 알려줄게
+        //전화를 걸기전에 나에게 승인을 받아라.
+       TeleMarketer("핸드폰판매", tellist, function(telno){
+            var tel = telno.substring(0,4)
+           var ok  = (tel  == '010-');
+           return ok;
+       });
+      
+    </script>
+</body>
+</html>

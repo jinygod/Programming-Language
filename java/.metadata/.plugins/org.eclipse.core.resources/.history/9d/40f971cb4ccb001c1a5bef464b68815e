@@ -1,0 +1,15 @@
+package calc;
+
+public class ClacRun {
+
+	public static void main(String[] args) {
+		// Cannot instantiate the type Calcable
+		// Calcable calc = new Calcable();
+		
+		System.out.println("[Calc]");
+		
+		Calc calc = new Calc();
+
+	}
+
+}

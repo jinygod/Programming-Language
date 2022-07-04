@@ -1,0 +1,15 @@
+package students2;
+
+public class StudentRun {
+
+	public static void main(String[] args) {
+		System.out.println("[Student]");
+		
+		Student s1 = new Student("007","제임스본드");
+		Student s2 = new Student("007","제임스본드");
+		
+		System.out.println("s1 == s2 ?" + (s1 == s2));
+		
+	}
+
+}

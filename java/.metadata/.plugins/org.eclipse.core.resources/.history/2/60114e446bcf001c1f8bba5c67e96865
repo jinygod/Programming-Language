@@ -1,0 +1,14 @@
+package threedprinter5generic;
+
+public class Material3DPrinter<T> {
+	private T material;
+
+	public void setMaterial(T material) {
+		this.material = material;
+	}
+	
+	public T getMaterial() {
+		return this.material;
+	}
+	
+}

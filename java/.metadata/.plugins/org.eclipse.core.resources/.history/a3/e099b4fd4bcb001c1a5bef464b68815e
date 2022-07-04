@@ -1,0 +1,15 @@
+인터페이스(Interface)
+
+(용어)
+1. 인터페이스(Interface)는 서로 다른 두 개의 시스템,
+   장치 사이에서 정보나 신호를 주고받는 경우의 접점이나 경계면이다.
+2. API(Application Programming Interface)
+	- Static Library
+	- Dynamic Link Library(DLL)
+	- Shared Library(SB)
+3. IDL(Interface Definition Language)
+	- RPC(Remote Procedure Call)
+	- CORBA(Common Object Request Broker Architecture)
+	- RMI(Java Remote Method Invocation)
+	- COM(Component Object Model) - OLE
+	- DECOM(Distributed Component Object Model)

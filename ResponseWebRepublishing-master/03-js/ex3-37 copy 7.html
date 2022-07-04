@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>String 객체 - substring</title>
+    <script>
+        /*
+        * 문자열에서 시작위치에서 종료위치까지의 문자열을 추출하며 리턴
+        * result = String.substring(시작위치, 종료위치)
+        * 시작위치 : 0부터 시작
+        * 종료위치 : 종료위치 - 1
+        * 결과크기 : 종료위치 - 시작위치
+        */
+        function substring(source, s, e ){
+            document.write('<h3>', source, '.substring:(', s, ',', e, ')', '</h3>');
+
+            var result = source.substring(s, e);
+              document.write('원본=', source, '<br>');
+                document.write('결과=', result, '<br>');
+        }
+        
+        var s1 = '010-1234-5678';
+        substring(s1, '4', '8'); //전화번호에서 중간번호를 추출
+
+        // 전화번호에서 끝4자리 추출
+        substring(s1, 9); //종료위치는 생략가능
+
+    </script>
+</head>
+<body>
+</body>
+</html>

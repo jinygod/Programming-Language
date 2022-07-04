@@ -1,0 +1,18 @@
+/*
+ * 인터페이스 정의 
+ * interface 인터페이스이름 {
+ * 		함수시그니처
+ * }
+ * -----------------------------------------------
+ * 1. 인터페이스는 추상 클래스처럼 함수의 구현(몸체)이 없다.
+ * 2. 인터페이스는 구현 클래스가 있어야 객체화 할 수 있다.
+ */
+package calc;
+
+public interface Calcable {
+	int add(int n1, int n2);
+	int sub(int n1, int n2);
+	int mul(int n1, int n2);
+	int div(int n1, int n2);
+	int tot();
+}

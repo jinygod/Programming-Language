@@ -1,0 +1,41 @@
+package calc;
+
+public class Calc implements Calcable {
+	int tot;
+	
+	Calc(){
+	}
+
+	@Override
+	public int add(int n1, int n2) {
+		int x = n1 + n2;
+		tot += x;
+		return x;
+	}
+
+	@Override
+	public int sub(int n1, int n2) {
+		int x = n1 - n2;
+		tot -= x;
+		return x;
+	}
+
+	@Override
+	public int mul(int n1, int n2) {
+		int x = n1 * n2;
+		tot *= x;
+		return x;
+	}
+
+	@Override
+	public int div(int n1, int n2) {
+		int x = n1 / n2;
+		tot /= x;
+		return x;
+	}
+	
+	int tot() {
+		return tot;
+	}
+
+}

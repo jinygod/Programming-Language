@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Math 객체를 이용한 로또</title>
+    <style>
+        table,tr,td{
+            width: 200px;
+            text-align: center;
+            border: 1px solid gray;
+            border-collapse: collapse;
+        }
+    </style>
+    <h1>로또 만들기</h1>
+    <ul>
+        <h3>로또규칙</h3>
+        <li>총 맞춰야 할 숫자의 갯수 6개</li>
+        <li>각 숫자는 1부터 45까지</li>
+        <li>
+            <h4>등수</h4>
+        <ul>
+            <li>1등: 6개 일치</li>
+            <li>2등: 5개 일치</li>
+            <li>3등: 4개 일치</li>
+            <li>4등: 3개 일치</li>
+            <li>5등: 2개 일치</li>
+            <li>6등: 1개 일치</li>
+        </ul>
+        </li>
+    </ul>
+    <hr>
+    <script>
+        const TOT_LOTTO = 6; //로또 번호 총 갯수
+        const MIN_LOTTO = 1; //로또 가장 작은 숫자
+        const MAX_LOTTO = 45; //로또 가장 큰 번호
+
+        function genLotto() { //로또 번호 발생기 : 난수 하나 발생
+            var rnd = Math.random();
+            var num = Math.floor(rnd * MAX_LOTTO) + MIN_LOTTO;
+            return num;
+        }
+
+        function makeLottery() { //로또 발행기 : 총 6개 숫자 발행
+            var nums = [];
+            for(var cnt=0; cnt < TOT_LOTTO; cnt++) {
+                var lotto = genLotto();
+                nums.push(lotto);
+            }
+
+            return nums;
+        }
+</script>
+</head>
+<body>
+    <script>
+        var userLotto = makeLottery();
+        document.write("<h3>사용자 로또 번호<h3>");
+        document.write("<table>");
+        document.write("<tr>");
+        for(var val of userLotto) {
+            document.write("<td>");
+            document.write(val);
+            document.write("</td>");
+        }
+        document.write("<tr>");
+            document.write("</tr>");
+
+        function rewardLotto(userLotto, prize){
+            document.write("<table>");
+            document.write("</table>");
+
+            document.write("<h3>", (ranking < 7 ) ? ranking : "꽝", "</h3>");
+
+        }
+    </script>
+
+</body>
+</html>

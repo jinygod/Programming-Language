@@ -1,0 +1,26 @@
+package threedprinter6generic;
+
+public class ThreeDPrinterMain3 {
+
+	public static void main(String[] args) {
+		System.out.println("[threedprinter6 Generic]");
+		
+		Material3DPrinter<Powder> materialPrinter = new Material3DPrinter<>(); // 뒤에 괄호는 생략가능 앞에 명시된걸로 들어감
+		materialPrinter.setMaterial(new Material() {
+
+			@Override
+			public void doPrinter() {
+				System.out.println("[Sillicone] doPrinter...");
+				
+			}
+			
+		});
+		materialPrinter.printing();
+		printing(materialPrinter.getMaterial());
+	}
+	public static void printing(Material material) {
+		material.doPrinter();
+	}
+
+}
+

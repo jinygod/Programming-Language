@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>String 객체</title>
+    <script>
+        // charAt()
+        var str = 'Javascript'
+        document.write(str.charAt(0));
+        // indexOf()
+        var str = 'Javascript'
+        document.write(str.indexOf('a'));
+        document.write(str.indexOf('k'));
+        // lastIndexOf()
+        var str = 'Javascript'
+        document.write(str.lastIndexOf('a'));
+        // includes()
+        var str = 'Javascript';
+        document.write(str.includes('script'));
+        // substring()
+        var str = 'http://icoxpublish.com';
+        document.write(str.substring(0, 4));
+        document.write(str.substring(7));
+        // substr()
+        var str = 'http://icoxpublish.com';
+        document.write(str.substr(7, 4));
+        // split()
+        var str = 'Javascript_jQuery';
+        var division = str.split('_');
+        document.write(division[0] + ', ' + division[1]);
+        // replace()
+        var str = 'm_out.gif';
+        document.write(str.replace('out', 'over'));
+        // concat()
+        var str1 = 'nav';
+        var str2 = '_bg';
+        document.write(str1.concat(str2));
+        // trim()
+        var str = ' removeblank ';        
+        document.write(str.trim());        
+        // toLowerCase(), toUpperCase()
+        var str = 'LowerCase';
+        document.write(str.toLowerCase());
+        var str = 'UpperCase';
+        document.write(str.toUpperCase());
+    </script>
+</head>
+<body>
+</body>
+</html>

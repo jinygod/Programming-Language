@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>배열</title>
+
+</head>
+<body>
+    <h1>배열 - map(...)</h1>
+    <p>배열객체.map(callback function(value, index, array))</p>
+    <p>기존 배열객체를 이용해서 새로운 배열을 생성</p>
+    <hr>
+    <script>
+        var odd = [1, 3, 5, 7, 9]; // 홀수
+
+        document.write('홀수 [', odd, ']', '<br>');
+
+        /* 
+        * 새로운배열 = 배열객체.map(콜백함수)
+        * 콜백함수에 의해서 처리된 배열의 요소값으로 새로운 배열을 생성
+        * 원본데이터는 변경되지 않음
+        *  - 배열의 크기는 기존의 배열크기와 동일
+        *  - 값은 콜백함수에 의해서 처리된 값으로 요소를 생성
+        * */
+        var even = odd.map(function(val, index, arr) {
+            document.write('콜백[', index, '] ', val, '<br>');
+            return val + 1;
+        });
+
+        document.write('홀수 [', odd, ']', '<br>');
+        document.write('짝수 [', even, ']', '<br>');
+    </script>
+</body>
+</html>

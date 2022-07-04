@@ -1,0 +1,17 @@
+package products;
+
+public class ProductRun {
+
+	public static void main(String[] args) {
+		Product<Car, String> proCar = new Product<>();
+		proCar.setKind(new Car("소나타"));
+		proCar.setModel("NF");
+		
+		Car car = proCar.getKind();
+		String model = proCar.getModel();
+		
+		System.out.println("자동차종류: " + car.name);
+		System.out.println("자동차 모델: " + model);
+	}
+
+}

@@ -1,0 +1,16 @@
+package threedprinter2;
+
+public class ThreeDPrinterMain {
+
+	public static void main(String[] args) {
+		Powder3DPrinter powderPrinter = new Powder3DPrinter();
+		powderPrinter.setMaterial(new Powder());
+		powderPrinter.printing();
+		
+		Plastic3DPrinter plasticPrinter = new Plastic3DPrinter();
+		plasticPrinter.setMaterial(new Plastic());
+		plasticPrinter.printing();
+		
+	}
+
+}

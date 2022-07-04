@@ -1,0 +1,13 @@
+package finder;
+
+public class LookupFinder extends SearchFinder{
+
+	@Override
+	public int lookup(String topic) {
+		System.out.printf("[LookupFinder] lookup(%s)%n", topic);
+		System.out.printf("\t line=%d%n"
+				, Searchfindable.contents().lookup(topic));
+		return 0;
+	}
+
+}

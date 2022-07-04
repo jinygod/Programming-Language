@@ -1,0 +1,14 @@
+package threedprinter;
+
+public class Plastic3DPrinter {
+	private Powder material;
+	
+	public void setMaterial(Powder material) {
+		this.material = material;
+	}
+	
+	public Powder getMaterial() {
+		return this.material;
+	}
+	
+}

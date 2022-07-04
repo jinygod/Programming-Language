@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;homework.NineNine&apos; to &apos;Question2&apos;&#x0D;&#x0A;- Original project: &apos;Homework03&apos;&#x0D;&#x0A;- Original element: &apos;homework.NineNine&apos;&#x0D;&#x0A;- Renamed element: &apos;homework.Question2&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;NineNine&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;homework{NineNine.java[NineNine" matchStrategy="1" name="Question2" qualified="false" references="true" similarDeclarations="false" stamp="1651211025659" textual="false" version="1.0"/>
+</session>

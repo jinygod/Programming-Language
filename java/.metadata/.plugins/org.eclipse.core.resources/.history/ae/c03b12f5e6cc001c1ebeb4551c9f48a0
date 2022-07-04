@@ -1,0 +1,31 @@
+package students3;
+
+public class StudentRun2 {
+
+	public static void main(String[] args) {
+		System.out.println("[Student]");
+		
+		Student s1 = new Student("008","제임스본드");
+		Student s2 = new Student("007","제임스본드");
+		Student s3 = s1;		
+
+		boolean s12 = s1.equals(s2);
+		boolean s13 = s1.equals(s3);
+		System.out.println("s1.equals(s2) ? " + s12);
+		System.out.println("s1.equals(s3) ? " + s13);
+		
+		System.out.println("s1 == s2 ? " + (s1 == s2));
+		System.out.println("s1 == s3 ? " + (s1 == s3));
+		
+		System.out.println("[String]");
+		String j1 = "제임스본드";
+		String j2 = "제임스본드";
+		String j3 = new String(j1);
+		String j4 = new String("제임스본드");
+		System.out.printf("[%s]j1 == j2 ? %b\n", j1, (j1 == j2));
+		System.out.printf("[%s]j1 == j3 ? %b\n", j3, (j1 == j3));
+		System.out.printf("[%s]j1 == j4 ? %b\n", j4, (j1 == j4));
+		System.out.printf("[%s]j3 == j4 ? %b\n", j4, (j3 == j4));
+		
+	}
+}

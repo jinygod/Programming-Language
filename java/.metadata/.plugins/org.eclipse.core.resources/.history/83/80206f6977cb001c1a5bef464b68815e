@@ -1,0 +1,22 @@
+package finder;
+
+public class FinderRun {
+
+	public static void main(String[] args) {
+		SearchFindable sf = new LookupFinder();
+		action(sf);
+	}
+		public static void action(SearchFindable findable) {
+			System.out.println("[Findㄱ.action]");
+			SearchFindable.action(findable);
+//			findable.lookup("자바");
+			/*
+			SearchFinder searchFinder = (SearchFinder)findable;
+			searchFinder.lookup("자바");
+			
+			LookupFinder LookupFinder = (LookupFinder)findable;
+			LookupFinder.lookup("코바");
+			*/
+	}
+
+}

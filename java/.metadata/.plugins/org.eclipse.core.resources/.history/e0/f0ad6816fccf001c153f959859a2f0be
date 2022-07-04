@@ -1,0 +1,10 @@
+/*
+ * 제네릭(Generic) : 멀티타입 파라미터
+ * class<A, B, C, ... >
+ */
+package products;
+
+public class Product<K, M> {
+	private K kind; // 제품종류
+	private M model; // 제품모델
+}

@@ -1,0 +1,35 @@
+package wrapperclass;
+
+public class WrapperClassMain4 {
+
+	public static void main(String[] args) {
+		
+		// 포장 클래스의 자료형으로 변환
+		byte b = Byte.parseByte("15");
+		short s = Short.parseShort("12345");
+		int n = Integer.parseInt("1234567890");
+		long l = Long.parseLong("123456789013");
+		float f = Float.parseFloat("3.14");
+		double d = Double.parseDouble("3.1415927");
+		boolean t = Boolean.parseBoolean("true");
+		
+		System.out.println("b = " + ++b);
+		System.out.println("s = " + s);
+		System.out.println("n = " + n);
+		System.out.println("l = " + l);
+		System.out.println("f = " + f);
+		System.out.println("d = " + d);
+		System.out.println("t = " + t);
+
+		try {
+			int un = Integer.parseUnsignedInt("1");
+			System.out.println("un = " + un);
+		}
+		catch(NumberFormatException e) {
+			System.out.println("음수값은 허용하지 않습니다.");
+		}
+		
+	}
+		
+
+}

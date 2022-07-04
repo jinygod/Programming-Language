@@ -1,0 +1,6 @@
+package genericprinter;
+
+public interface Material {
+	public void doPrinter();
+
+}

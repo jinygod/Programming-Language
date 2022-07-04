@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>삽입 관련 메서드</title>   
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#m1").prepend("<p>삽입1_1</p>");
+            $("#m1").append("<p>삽입1_2</p>");
+            $("#m1").before("<p>삽입1_3</p>");
+            $("#m1").after("<p>삽입1_4</p>");            
+            $("<p>삽입2_1</p>").prependTo("#m2");
+            $("<p>삽입2_2</p>").appendTo("#m2");
+            $("<p>삽입2_3</p>").insertBefore("#m2");
+            $("<p>삽입2_4</p>").insertAfter("#m2");
+        });
+    </script>
+</head>
+<body>
+    <div id="m1"><strong>내용1</strong></div>
+    <div id="m2"><strong>내용2</strong></div>
+</body>
+</html>

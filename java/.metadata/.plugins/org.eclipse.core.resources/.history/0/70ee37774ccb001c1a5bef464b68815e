@@ -1,0 +1,10 @@
+package calc;
+
+public class ClacRun {
+
+	public static void main(String[] args) {
+		Calcable calc = new Calcable();
+
+	}
+
+}

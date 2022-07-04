@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;P12GeneralCollection&apos; to &apos;P12GenericCollections&apos;" description="Rename resource &apos;P12GeneralCollection&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/P12GeneralCollection" name="P12GenericCollections" stamp="1652066815219" updateReferences="true"/>
+</session>

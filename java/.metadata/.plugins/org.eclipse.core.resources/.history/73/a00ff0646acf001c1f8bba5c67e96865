@@ -1,0 +1,25 @@
+package threedprinter5generic;
+
+public class Material3DPrinter<T> {
+	private T material;
+	
+	public void printing() {
+		if(this.material instanceof Powder) {
+			Powder powder = (Powder)this.material;
+			powder.doPrinter();
+		
+		}
+		else if(this.material instanceof Plastic) {
+			Plastic plastic = (Plastic)this.material;
+			plastic.doPrinter();
+		}
+	}
+	public void setMaterial(T material) {
+		this.material = material;
+	}
+	
+	public T getMaterial() {
+		return this.material;
+	}
+	
+}

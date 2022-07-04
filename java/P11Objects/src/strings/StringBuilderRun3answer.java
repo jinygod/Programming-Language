@@ -1,0 +1,23 @@
+/*
+ * StringBuilder: 스트링 처리
+ * 1. String : 단일 문자열 처리, 저장된 문자열을 수정할 수 없다.
+ * 2. StringBuilder : 다중 문자열 처리, 단일 스레드 환경에서 사용
+ * 3. StringBuffer : 다중 문자열 처리, 멀티 스레드 환경에서 사용
+ */
+package strings;
+
+public class StringBuilderRun3answer {
+
+	public static void main(String[] args) {
+		StringBuilder filepath = new StringBuilder("/home/ezen/workspace/ac.txt");
+		System.out.println("[파일이름 추출]");
+		int filepos = filepath.lastIndexOf("/");
+		String filename = filepath.substring(filepos + 1);
+		System.out.println("filename= " + filename);
+
+		System.out.println("[파일이름 포함된 폴더 추출]");
+		int folderpos = filepath.lastIndexOf("/", filepos - 1);
+		String foldername = filepath.substring(folderpos + 1, filepos);
+		System.out.println("folder name = " + foldername);
+ }
+}

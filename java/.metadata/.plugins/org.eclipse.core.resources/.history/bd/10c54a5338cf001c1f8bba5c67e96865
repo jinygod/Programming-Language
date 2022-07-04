@@ -1,0 +1,11 @@
+package wrapperclass;
+
+public class WrapperClassMain4 {
+
+	public static void main(String[] args) {
+		byte b = Byte.parseByte("15");
+		System.out.println("b= " + b);
+
+	}
+
+}

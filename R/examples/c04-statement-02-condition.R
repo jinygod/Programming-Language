@@ -25,3 +25,12 @@ if(score >= 90){
 
 cat("당신의 점수는? ", score)
 cat("당신의 학점은? ", grade)
+
+# ifelse() 함수
+# 3항 연산자와 유사
+# ifelse(조건식, 참값, 거짓갓)
+
+# score <- 80
+score <- 77
+guide <- ifelse(score >= 80, "우수", "노력")
+guide

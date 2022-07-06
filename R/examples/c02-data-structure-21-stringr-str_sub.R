@@ -50,3 +50,9 @@ hwl[1]
 hwl[2]
 class(hwl)
 
+# 문자열 결합
+sv <- c("홍길동", "이순신", "강감찬")
+sj <- paste(sv, collapse=",")
+sj
+ss <- paste(sv, collapse="/")
+ss

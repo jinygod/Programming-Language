@@ -5,12 +5,10 @@
 
 # 입력받은 인자의 모든 값을 더하는 함수
 def sum(*args):
-    print(f'function -> sum( {args} ), type({type(args)}')
     result = 0
     
     for x in args:
         result += x
-        print(f'x={x}, result={result}')
 
     return result
 
